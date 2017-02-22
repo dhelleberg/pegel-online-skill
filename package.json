@@ -1,0 +1,20 @@
+{
+  "name": "pegel-online-alexa-skill",
+  "version": "1.0.0",
+  "description": "ask pegel online via alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Alexa",
+    "skill",
+    "Pegel Online"
+  ],
+  "author": "Dominik Helleberg",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6",
+    "string-similarity": "^1.1.0"
+  }
+}
