@@ -25,7 +25,7 @@ const handlers = {
         
         if(!pegel) {
             this.attributes.speechOutput = this.t('PEGEL_MISSING_RESPONSE');
-            this.emit(':ask', this.attributes.speechOutput, self.attributes.repromptSpeech);
+            this.emit(':ask', this.attributes.speechOutput, this.attributes.repromptSpeech);
             return;
         }
         
