@@ -89,6 +89,9 @@ const handlers = {
     },
     'SessionEndedRequest':function () {
         this.emit(':tell', this.t("STOP_MESSAGE"));
+    },
+    'AMAZON.HelpIntent':function () {
+        this.emit(':tell', this.t("HELP_MESSAGE"));
     }
 }
 
@@ -177,7 +180,8 @@ const languageStrings = {
             PEGEL_MISSING_RESPONSE: 'Ich konnte den gewünschten Pegel nicht verstehen, bitte versuche es noch einmal.',
             FUZZY_PEGEL_RESPONSE: 'Ich konnte den Pegel %s nicht finden meintest Du vielleicht %s?',
             WELCOME_REPROMT: 'Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.',
-            STOP_MESSAGE: 'Auf Wiedersehen!'
+            STOP_MESSAGE: 'Auf Wiedersehen!',
+            HELP_MESSAGE: 'Du kannst alle Pegel abfragen die auf der Pegel Online Seite des Bundes erfasst wurden. Frag zum Beispiel: Sag mir den Pegel bei Wesel'
         }
     }
 }
