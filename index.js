@@ -57,7 +57,7 @@ const handlers = {
                         pegelName = stringSimilarity.findBestMatch(pegel, allNames).bestMatch.target;
                         self.attributes.speechOutput = self.t('FUZZY_PEGEL_RESPONSE',pegel, pegelName);
                         self.attributes.fuzzySearchResponse = pegelName;
-                        self.emit(':ask', self.attributes.speechOutput, self.attributes.repromptSpeech);
+                        self.emit(':tell', self.attributes.speechOutput);
                     }
                 });
             }
@@ -74,7 +74,7 @@ const handlers = {
                     self.attributes.speechOutput = self.t('PEGEL_RESPONSE_SHORT', pegel, jsonResponse.jsonResponse.value, tendenz);
                 else
                     self.attributes.speechOutput = self.t('PEGEL_RESPONSE', pegel, flussSlot.value, jsonResponse.jsonResponse.value, tendenz);
-                self.emit(':ask', self.attributes.speechOutput, self.attributes.repromptSpeech);
+                self.emit(':tell', self.attributes.speechOutput);
             }
         });
     },
